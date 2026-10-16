@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ankukr824207-hub.github.io/Error-book-refresh/sitemap.xml
