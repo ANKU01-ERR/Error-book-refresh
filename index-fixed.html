@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Error Book Refresh | JEE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101014;color:white;font-family:Arial,sans-serif}
+header{padding:20px;background:#1b1b21;text-align:center;border-bottom:1px solid #444}
+nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:15px}
+a{color:white;text-decoration:none}
+main{max-width:950px;margin:auto;padding:20px}
+.hero{text-align:center;padding:30px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.card,.panel{background:#1b1b21;border:1px solid #393940;border-radius:10px;padding:20px}
+h2{border-left:4px solid white;padding-left:12px}
+label{display:block;margin:15px 0 7px}
+input,select{width:100%;padding:12px;background:#101014;color:white;border:1px solid #555;border-radius:5px}
+button{padding:12px;background:#e63946;color:white;border:0;border-radius:5px;font-weight:bold;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.panel button{width:100%;margin-top:15px}
+#gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin-top:20px}
+.entry{background:#1b1b21;padding:18px;border:1px solid #444;border-radius:8px;overflow-wrap:anywhere}
+.entry img{width:100%;max-height:250px;object-fit:contain;margin-top:10px}
+small{color:#bbb}
+footer{text-align:center;padding:25px;color:#aaa}
+.login-area{text-align:center;padding:14px 16px 0}
+#loginStatus{color:#ddd;margin:10px auto;max-width:850px;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header>
+  <h1>📚 Error Book Refresh</h1>
+  <p>Learn from your mistakes | JEE Preparation</p>
+</header>
+<div class="login-area">
+  <button id="googleLogin" type="button">Continue with Google</button>
+  <button id="googleLogout" type="button" hidden>Sign Out</button>
+  <p id="loginStatus" role="status">Google Login के लिए वेबसाइट को localhost या HTTPS पर खोलें।</p>
+</div>
+<nav>
+  <a href="#study">Study Section</a>
+  <a href="#journal">My Error Book</a>
+</nav>
+<main>
+  <section class="hero">
+    <h2>Welcome JEE Aspirant!</h2>
+    <p>अपनी गलतियों को लिखें, दोहराएँ और अपनी तैयारी बेहतर बनाएँ।</p>
+  </section>
+  <section id="study">
+    <h2>Study Section</h2>
+    <div class="grid">
+      <div class="card"><h3>⚡ Physics</h3><p>Mechanics, Electricity, Modern Physics</p></div>
+      <div class="card"><h3>🧪 Chemistry</h3><p>Physical, Organic, Inorganic</p></div>
+      <div class="card"><h3>📐 Maths</h3><p>Algebra, Calculus, Coordinate Geometry</p></div>
+    </div>
+  </section>
+  <section id="journal" style="margin-top:35px">
+    <h2>My Error Journal</h2>
+    <div class="panel">
+      <label for="subject">Subject</label>
+      <select id="subject">
+        <option>Physics</option>
+        <option>Chemistry</option>
+        <option>Maths</option>
+      </select>
+      <label for="note">Topic / Question</label>
+      <input id="note" maxlength="500" placeholder="उदाहरण: Rotation Q5">
+      <label for="photo">Question की फोटो (वैकल्पिक)</label>
+      <input id="photo" type="file" accept="image/*">
+      <button id="save">SAVE TO ERROR BOOK 💾</button>
+      <p id="status" role="status"></p>
+    </div>
+    <h2 style="margin-top:30px">Saved Errors</h2>
+    <div id="gallery"></div>
+  </section>
+</main>
+<footer>© Error Book Refresh | JEE</footer>
+<script>
+const KEY = "jeeErrorBookWebsite";
+function getEntries(){
+  try{return JSON.parse(localStorage.getItem(KEY)||"[]")}
+  catch{return []}
+}
+function render(){
+  const gallery=document.getElementById("gallery");
+  gallery.replaceChildren();
+  const entries=getEntries();
+  if(!entries.length){
+    gallery.textContent="अभी कोई गलती सेव नहीं है।";
+    return;
+  }
+  entries.forEach(entry=>{
+    const card=document.createElement("article");
+    card.className="entry";
+    const heading=document.createElement("h3");
+    heading.textContent=entry.subject;
+    const note=document.createElement("p");
+    note.textContent=entry.note;
+    const date=document.createElement("small");
+    date.textContent=entry.date;
+    card.append(heading,note,date);
+    if(entry.photo){
+      const img=document.createElement("img");
+      img.src=entry.photo;
+      img.alt="Question photo";
+      card.appendChild(img);
+    }
+    const del=document.createElement("button");
+    del.textContent="Delete";
+    del.style.marginTop="12px";
+    del.onclick=()=>{
+      if(confirm("इस गलती को हटाएँ?")){
+        localStorage.setItem(KEY,JSON.stringify(
+          getEntries().filter(x=>x.id!==entry.id)
+        ));
+        render();
+      }
+    };
+    card.appendChild(del);
+    gallery.appendChild(card);
+  });
+}
+document.getElementById("save").addEventListener("click",async()=>{
+  const subject=document.getElementById("subject").value;
+  const note=document.getElementById("note").value.trim();
+  const file=document.getElementById("photo").files[0];
+  const status=document.getElementById("status");
+  const btn=document.getElementById("save");
+  if(!note){status.textContent="पहले Topic लिखें।";return}
+  if(file && !file.type.startsWith("image/")){
+    status.textContent="सही फोटो चुनें।";return;
+  }
+  if(file && file.size>5*1024*1024){
+    status.textContent="5 MB से छोटी फोटो चुनें।";return;
+  }
+  btn.disabled=true;
+  try{
+    let photo="";
+    if(file){
+      photo=await new Promise((resolve,reject)=>{
+        const reader=new FileReader();
+        reader.onload=()=>resolve(reader.result);
+        reader.onerror=()=>reject(new Error("फोटो पढ़ी नहीं जा सकी।"));
+        reader.readAsDataURL(file);
+      });
+    }
+    const entries=getEntries();
+    entries.unshift({
+      id:Date.now().toString()+Math.random(),
+      subject,note,photo,
+      date:new Date().toLocaleString()
+    });
+    localStorage.setItem(KEY,JSON.stringify(entries));
+    document.getElementById("note").value="";
+    document.getElementById("photo").value="";
+    render();
+    status.textContent="✅ गलती सेव हो गई!";
+  }catch(e){
+    status.textContent="सेव नहीं हुआ। स्टोरेज की जगह जाँचें।";
+  }finally{
+    btn.disabled=false;
+  }
+});
+render();
+</script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCLQ3bpMA7Of9aGcWBU2wwiUV52xyKWAF0",
+  authDomain: "error-book-refresh.firebaseapp.com",
+  projectId: "error-book-refresh",
+  storageBucket: "error-book-refresh.firebasestorage.app",
+  messagingSenderId: "296050090836",
+  appId: "1:296050090836:web:c6e245447e3e9fb68e1ec1",
+  measurementId: "G-7N124K4JKQ"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+const loginButton = document.getElementById("googleLogin");
+const logoutButton = document.getElementById("googleLogout");
+const loginStatus = document.getElementById("loginStatus");
+
+onAuthStateChanged(auth, user => {
+  if (user) {
+    loginStatus.textContent = "✅ Logged in: " + (user.displayName || user.email || "Google user");
+    loginButton.hidden = true;
+    logoutButton.hidden = false;
+  } else {
+    loginStatus.textContent = "Google Login करने के लिए Continue with Google दबाएँ।";
+    loginButton.hidden = false;
+    logoutButton.hidden = true;
+  }
+});
+
+loginButton.addEventListener("click", async () => {
+  loginButton.disabled = true;
+  try {
+    const result = await signInWithPopup(auth, provider);
+    loginStatus.textContent = "✅ Login Successful: " + (result.user.displayName || result.user.email || "Google user");
+  } catch (error) {
+    console.error("Google Login Error:", error);
+    loginStatus.textContent = "Login Error (" + error.code + "): " + error.message;
+  } finally {
+    loginButton.disabled = false;
+  }
+});
+logoutButton.addEventListener("click", async () => {
+  try { await signOut(auth); }
+  catch (error) { console.error(error); loginStatus.textContent = "Sign out error: " + error.message; }
+});
+</script>
+</body>
+</html>
