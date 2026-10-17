@@ -27,6 +27,7 @@ small{color:#bbb}
 footer{text-align:center;padding:25px;color:#aaa}
 .login-area{text-align:center;padding:14px 16px 0}
 #loginStatus{color:#ddd;margin:10px auto;max-width:850px;overflow-wrap:anywhere}
+#status{overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -37,7 +38,7 @@ footer{text-align:center;padding:25px;color:#aaa}
 <div class="login-area">
   <button id="googleLogin" type="button">Continue with Google</button>
   <button id="googleLogout" type="button" hidden>Sign Out</button>
-  <p id="loginStatus" role="status">Google Login के लिए वेबसाइट को localhost या HTTPS पर खोलें।</p>
+  <p id="loginStatus" role="status">Google Login के लिए वेबसाइट को HTTPS पर खोलें।</p>
 </div>
 <nav>
   <a href="#study">Study Section</a>
@@ -67,110 +68,29 @@ footer{text-align:center;padding:25px;color:#aaa}
       </select>
       <label for="note">Topic / Question</label>
       <input id="note" maxlength="500" placeholder="उदाहरण: Rotation Q5">
-      <label for="photo">Question की फोटो (वैकल्पिक)</label>
+      <label for="photo">Question की फोटो (वैकल्पिक, 5 MB से कम)</label>
       <input id="photo" type="file" accept="image/*">
-      <button id="save">SAVE TO ERROR BOOK 💾</button>
-      <p id="status" role="status"></p>
+      <button id="save" type="button">SAVE TO ERROR BOOK 💾</button>
+      <p id="status" role="status">अपनी गलतियाँ सेव करने के लिए पहले Google से login करें।</p>
     </div>
     <h2 style="margin-top:30px">Saved Errors</h2>
     <div id="gallery"></div>
   </section>
 </main>
 <footer>© Error Book Refresh | JEE</footer>
-<script>
-const KEY = "jeeErrorBookWebsite";
-function getEntries(){
-  try{return JSON.parse(localStorage.getItem(KEY)||"[]")}
-  catch{return []}
-}
-function render(){
-  const gallery=document.getElementById("gallery");
-  gallery.replaceChildren();
-  const entries=getEntries();
-  if(!entries.length){
-    gallery.textContent="अभी कोई गलती सेव नहीं है।";
-    return;
-  }
-  entries.forEach(entry=>{
-    const card=document.createElement("article");
-    card.className="entry";
-    const heading=document.createElement("h3");
-    heading.textContent=entry.subject;
-    const note=document.createElement("p");
-    note.textContent=entry.note;
-    const date=document.createElement("small");
-    date.textContent=entry.date;
-    card.append(heading,note,date);
-    if(entry.photo){
-      const img=document.createElement("img");
-      img.src=entry.photo;
-      img.alt="Question photo";
-      card.appendChild(img);
-    }
-    const del=document.createElement("button");
-    del.textContent="Delete";
-    del.style.marginTop="12px";
-    del.onclick=()=>{
-      if(confirm("इस गलती को हटाएँ?")){
-        localStorage.setItem(KEY,JSON.stringify(
-          getEntries().filter(x=>x.id!==entry.id)
-        ));
-        render();
-      }
-    };
-    card.appendChild(del);
-    gallery.appendChild(card);
-  });
-}
-document.getElementById("save").addEventListener("click",async()=>{
-  const subject=document.getElementById("subject").value;
-  const note=document.getElementById("note").value.trim();
-  const file=document.getElementById("photo").files[0];
-  const status=document.getElementById("status");
-  const btn=document.getElementById("save");
-  if(!note){status.textContent="पहले Topic लिखें।";return}
-  if(file && !file.type.startsWith("image/")){
-    status.textContent="सही फोटो चुनें।";return;
-  }
-  if(file && file.size>5*1024*1024){
-    status.textContent="5 MB से छोटी फोटो चुनें।";return;
-  }
-  btn.disabled=true;
-  try{
-    let photo="";
-    if(file){
-      photo=await new Promise((resolve,reject)=>{
-        const reader=new FileReader();
-        reader.onload=()=>resolve(reader.result);
-        reader.onerror=()=>reject(new Error("फोटो पढ़ी नहीं जा सकी।"));
-        reader.readAsDataURL(file);
-      });
-    }
-    const entries=getEntries();
-    entries.unshift({
-      id:Date.now().toString()+Math.random(),
-      subject,note,photo,
-      date:new Date().toLocaleString()
-    });
-    localStorage.setItem(KEY,JSON.stringify(entries));
-    document.getElementById("note").value="";
-    document.getElementById("photo").value="";
-    render();
-    status.textContent="✅ गलती सेव हो गई!";
-  }catch(e){
-    status.textContent="सेव नहीं हुआ। स्टोरेज की जगह जाँचें।";
-  }finally{
-    btn.disabled=false;
-  }
-});
-render();
-</script>
+
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import {
+  getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import {
+  getFirestore, collection, addDoc, query, where, getDocs, deleteDoc, doc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCLQ3bpMA7Of9aGcWBU2wwiUV52xyKWAF0",
+  apiKey: "AIzaSyCLQ3bpMAOf9aGcWBU2wwiUV52xyKWAF0",
   authDomain: "error-book-refresh.firebaseapp.com",
   projectId: "error-book-refresh",
   storageBucket: "error-book-refresh.firebasestorage.app",
@@ -178,30 +98,201 @@ const firebaseConfig = {
   appId: "1:296050090836:web:c6e245447e3e9fb68e1ec1",
   measurementId: "G-7N124K4JKQ"
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
+
 const loginButton = document.getElementById("googleLogin");
 const logoutButton = document.getElementById("googleLogout");
 const loginStatus = document.getElementById("loginStatus");
+const statusEl = document.getElementById("status");
+const saveButton = document.getElementById("save");
+const gallery = document.getElementById("gallery");
+let currentUser = null;
+let loadSequence = 0;
 
-onAuthStateChanged(auth, user => {
-  if (user) {
-    loginStatus.textContent = "✅ Logged in: " + (user.displayName || user.email || "Google user");
-    loginButton.hidden = true;
-    logoutButton.hidden = false;
-  } else {
-    loginStatus.textContent = "Google Login करने के लिए Continue with Google दबाएँ।";
-    loginButton.hidden = false;
-    logoutButton.hidden = true;
+function setStatus(message) {
+  statusEl.textContent = message;
+}
+
+function showEmpty(message) {
+  gallery.replaceChildren();
+  gallery.textContent = message;
+}
+
+function makeEntryCard(entry) {
+  const card = document.createElement("article");
+  card.className = "entry";
+
+  const heading = document.createElement("h3");
+  heading.textContent = entry.subject || "Subject";
+  const note = document.createElement("p");
+  note.textContent = entry.note || "";
+  const date = document.createElement("small");
+  date.textContent = entry.dateText || "Saved";
+
+  card.append(heading, note, date);
+
+  if (entry.photoData) {
+    const img = document.createElement("img");
+    img.src = entry.photoData;
+    img.alt = "Question photo";
+    card.appendChild(img);
+  }
+
+  const del = document.createElement("button");
+  del.type = "button";
+  del.textContent = "Delete";
+  del.style.marginTop = "12px";
+  del.addEventListener("click", async () => {
+    if (!currentUser) {
+      setStatus("पहले Google से login करें।");
+      return;
+    }
+    if (!confirm("इस गलती को अपने account से हटाएँ?")) return;
+    del.disabled = true;
+    try {
+      // Document ID and user ID are checked before deletion.
+      const ref = doc(db, "notes", entry.id);
+      const snapshotQuery = query(
+        collection(db, "notes"),
+        where("__name__", "==", entry.id),
+        where("userId", "==", currentUser.uid)
+      );
+      const owned = await getDocs(snapshotQuery);
+      if (owned.empty) {
+        setStatus("यह रिकॉर्ड नहीं मिला या आपके account का नहीं है।");
+        return;
+      }
+      await deleteDoc(ref);
+      setStatus("गलती delete हो गई।");
+      await loadEntries();
+    } catch (error) {
+      console.error("Delete error:", error);
+      setStatus("Delete नहीं हुआ। Firestore Security Rules जाँचें: " + error.message);
+    } finally {
+      del.disabled = false;
+    }
+  });
+  card.appendChild(del);
+  return card;
+}
+
+async function loadEntries() {
+  const sequence = ++loadSequence;
+  if (!currentUser) {
+    showEmpty("अपनी saved गलतियाँ देखने के लिए Google से login करें।");
+    return;
+  }
+  showEmpty("Saved errors लोड हो रहे हैं…");
+  try {
+    const q = query(
+      collection(db, "notes"),
+      where("userId", "==", currentUser.uid)
+    );
+    const result = await getDocs(q);
+    if (sequence !== loadSequence || !currentUser) return;
+    const entries = result.docs.map(d => ({ id: d.id, ...d.data() }));
+    entries.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+    gallery.replaceChildren();
+    if (!entries.length) {
+      showEmpty("अभी इस account में कोई गलती सेव नहीं है।");
+      return;
+    }
+    entries.forEach(entry => gallery.appendChild(makeEntryCard(entry)));
+  } catch (error) {
+    console.error("Load error:", error);
+    showEmpty("Data लोड नहीं हुआ। Firestore Security Rules जाँचें।");
+    setStatus("Firestore से data नहीं पढ़ पाए: " + error.message);
+  }
+}
+
+// Resize/compress the selected photo so it is small enough for Firestore documents.
+// Firestore documents have a 1 MiB maximum size; this keeps photos near 450 KiB.
+async function photoToSmallDataUrl(file) {
+  if (!file) return "";
+  if (!file.type.startsWith("image/")) throw new Error("कृपया image file चुनें।");
+  if (file.size > 5 * 1024 * 1024) throw new Error("फोटो 5 MB से छोटी होनी चाहिए।");
+
+  const sourceUrl = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("फोटो पढ़ी नहीं जा सकी।"));
+    reader.readAsDataURL(file);
+  });
+
+  const image = await new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error("फोटो खुल नहीं सकी।"));
+    img.src = sourceUrl;
+  });
+
+  const maxSide = 1000;
+  const scale = Math.min(1, maxSide / Math.max(image.width, image.height));
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.max(1, Math.round(image.width * scale));
+  canvas.height = Math.max(1, Math.round(image.height * scale));
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+  let quality = 0.72;
+  let dataUrl = canvas.toDataURL("image/jpeg", quality);
+  while (dataUrl.length > 450 * 1024 && quality > 0.35) {
+    quality -= 0.08;
+    dataUrl = canvas.toDataURL("image/jpeg", quality);
+  }
+  if (dataUrl.length > 500 * 1024) {
+    throw new Error("फोटो बहुत बड़ी है। कृपया छोटी या कम resolution वाली फोटो चुनें।");
+  }
+  return dataUrl;
+}
+
+saveButton.addEventListener("click", async () => {
+  if (!currentUser) {
+    setStatus("पहले Continue with Google दबाकर login करें।");
+    return;
+  }
+
+  const subject = document.getElementById("subject").value;
+  const note = document.getElementById("note").value.trim();
+  const file = document.getElementById("photo").files[0];
+  if (!note) {
+    setStatus("पहले Topic / Question लिखें।");
+    return;
+  }
+
+  saveButton.disabled = true;
+  try {
+    setStatus("सेव हो रहा है…");
+    const photoData = await photoToSmallDataUrl(file);
+    const now = new Date();
+    await addDoc(collection(db, "notes"), {
+      userId: currentUser.uid,
+      subject,
+      note,
+      photoData,
+      dateText: now.toLocaleString("hi-IN"),
+      createdAt: serverTimestamp()
+    });
+    document.getElementById("note").value = "";
+    document.getElementById("photo").value = "";
+    setStatus("✅ आपकी गलती आपके Google account में सेव हो गई।");
+    await loadEntries();
+  } catch (error) {
+    console.error("Save error:", error);
+    setStatus("सेव नहीं हुआ: " + error.message + " — Firestore Security Rules भी जाँचें।");
+  } finally {
+    saveButton.disabled = false;
   }
 });
 
 loginButton.addEventListener("click", async () => {
   loginButton.disabled = true;
   try {
-    const result = await signInWithPopup(auth, provider);
-    loginStatus.textContent = "✅ Login Successful: " + (result.user.displayName || result.user.email || "Google user");
+    await signInWithPopup(auth, provider);
   } catch (error) {
     console.error("Google Login Error:", error);
     loginStatus.textContent = "Login Error (" + error.code + "): " + error.message;
@@ -209,9 +300,31 @@ loginButton.addEventListener("click", async () => {
     loginButton.disabled = false;
   }
 });
+
 logoutButton.addEventListener("click", async () => {
-  try { await signOut(auth); }
-  catch (error) { console.error(error); loginStatus.textContent = "Sign out error: " + error.message; }
+  try {
+    await signOut(auth);
+  } catch (error) {
+    console.error("Sign out error:", error);
+    loginStatus.textContent = "Sign out error: " + error.message;
+  }
+});
+
+onAuthStateChanged(auth, async user => {
+  currentUser = user;
+  if (user) {
+    loginStatus.textContent = "✅ Logged in: " + (user.displayName || user.email || "Google user");
+    loginButton.hidden = true;
+    logoutButton.hidden = false;
+    setStatus("आपका account तैयार है।");
+    await loadEntries();
+  } else {
+    loginStatus.textContent = "Google Login करने के लिए Continue with Google दबाएँ।";
+    loginButton.hidden = false;
+    logoutButton.hidden = true;
+    setStatus("अपनी गलतियाँ सेव करने के लिए पहले Google से login करें।");
+    showEmpty("अपनी saved गलतियाँ देखने के लिए Google से login करें।");
+  }
 });
 </script>
 </body>
