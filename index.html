@@ -28,6 +28,15 @@ footer{text-align:center;padding:25px;color:#aaa}
 .login-area{text-align:center;padding:14px 16px 0}
 #loginStatus{color:#ddd;margin:10px auto;max-width:850px;overflow-wrap:anywhere}
 #status{overflow-wrap:anywhere}
+details.subject{grid-column:1/-1}
+details.subject>summary{cursor:pointer;font-size:1.2em;font-weight:bold;list-style:none}
+details.chapter{margin:10px 0 0 10px;padding:8px 12px;background:#101014;border:1px solid #393940;border-radius:8px}
+details.chapter>summary{cursor:pointer}
+details.klass{margin:12px 0 0 6px;padding:8px 10px;border-left:3px solid #e63946}
+details.klass>summary{cursor:pointer;font-weight:bold}
+.pdfs{margin:8px 0 4px 14px;padding:0;list-style:none}
+.pdfs li{margin:8px 0}
+.pdfs a{color:#7cc4ff;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -51,11 +60,510 @@ footer{text-align:center;padding:25px;color:#aaa}
   </section>
   <section id="study">
     <h2>Study Section</h2>
+    <p><small>Subject पर क्लिक करें → Chapter चुनें → PDF खोलें।</small></p>
     <div class="grid">
-      <div class="card"><h3>⚡ Physics</h3><p>Mechanics, Electricity, Modern Physics</p></div>
-      <div class="card"><h3>🧪 Chemistry</h3><p>Physical, Organic, Inorganic</p></div>
-      <div class="card"><h3>📐 Maths</h3><p>Algebra, Calculus, Coordinate Geometry</p></div>
+<!-- ============ PHYSICS ============ -->
+<details class="card subject">
+  <summary>⚡ Physics</summary>
+  <details class="klass">
+    <summary>🎓 Class 11 Physics</summary>
+    <details class="chapter">
+      <summary>📂 Units and Measurements</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Units and Measurements - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Motion in a Straight Line</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Motion in a Straight Line - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Motion in a Plane</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Motion in a Plane - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Laws of Motion</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Laws of Motion - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Work, Energy, and Power</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Work, Energy, and Power - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 System of Particles and Rotational Motion</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 System of Particles and Rotational Motion - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Gravitation</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Gravitation - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Mechanical Properties of Solids</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mechanical Properties of Solids - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Mechanical Properties of Fluids</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mechanical Properties of Fluids - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Thermal Properties of Matter</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Thermal Properties of Matter - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Thermodynamics</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Thermodynamics - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Kinetic Theory of Gases</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Kinetic Theory of Gases - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Oscillations</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Oscillations - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Waves</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Waves - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>🎓 Class 12 Physics</summary>
+    <details class="chapter">
+      <summary>📂 Electric Charges and Fields</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electric Charges and Fields - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Electrostatic Potential and Capacitance</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electrostatic Potential and Capacitance - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Current Electricity</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Current Electricity - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Moving Charges and Magnetism</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Moving Charges and Magnetism - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Magnetism and Matter</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Magnetism and Matter - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Electromagnetic Induction</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electromagnetic Induction - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Alternating Current</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Alternating Current - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Electromagnetic Waves</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electromagnetic Waves - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Ray Optics and Optical Instruments</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Ray Optics and Optical Instruments - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Wave Optics</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Wave Optics - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Dual Nature of Radiation and Matter</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Dual Nature of Radiation and Matter - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Atoms</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Atoms - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Nuclei</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Nuclei - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Semiconductor Electronics: Materials, Devices and Simple Circuits</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Semiconductor Electronics: Materials, Devices and Simple Circuits - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Experimental Skills (Practical Physics)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Experimental Skills (Practical Physics) - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+</details>
+
+<!-- ============ CHEMISTRY ============ -->
+<details class="card subject">
+  <summary>🧪 Chemistry</summary>
+  <details class="klass">
+    <summary>🧪 Physical Chemistry</summary>
+    <details class="chapter">
+      <summary>📂 Some Basic Concepts in Chemistry (Mole Concept)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Some Basic Concepts in Chemistry (Mole Concept) - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Atomic Structure</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Atomic Structure - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Chemical Bonding and Molecular Structure</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Bonding and Molecular Structure - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Chemical Thermodynamics</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Thermodynamics - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Chemical Equilibrium</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Equilibrium - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Ionic Equilibrium</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Ionic Equilibrium - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Redox Reactions</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Redox Reactions - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Solutions</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Solutions - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Electrochemistry</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electrochemistry - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Chemical Kinetics</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Kinetics - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>🧪 Inorganic Chemistry</summary>
+    <details class="chapter">
+      <summary>📂 Classification of Elements and Periodicity in Properties</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Classification of Elements and Periodicity in Properties - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 p-Block Elements</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 p-Block Elements - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 d-and f-Block Elements</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 d-and f-Block Elements - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Coordination Compounds</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Coordination Compounds - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>🧪 Organic Chemistry</summary>
+    <details class="chapter">
+      <summary>📂 Purification and Characterisation of Organic Compounds</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Purification and Characterisation of Organic Compounds - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Some Basic Principles of Organic Chemistry (GOC)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Some Basic Principles of Organic Chemistry (GOC) - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Hydrocarbons</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Hydrocarbons - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Organic Compounds Containing Halogens (Haloalkanes and Haloarenes)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Organic Compounds Containing Halogens (Haloalkanes and Haloarenes) - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Organic Compounds Containing Oxygen (Alcohols, Phenols, Ethers, Aldehydes, Ketones, Carboxylic Acids)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Organic Compounds Containing Oxygen (Alcohols, Phenols, Ethers, Aldehydes, Ketones, Carboxylic Acids) - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Organic Compounds Containing Nitrogen (Amines)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Organic Compounds Containing Nitrogen (Amines) - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Biomolecules</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Biomolecules - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Principles Related to Practical Chemistry</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Principles Related to Practical Chemistry - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+</details>
+
+<!-- ============ MATHS ============ -->
+<details class="card subject">
+  <summary>📐 Maths</summary>
+  <details class="klass">
+    <summary>📐 Algebra</summary>
+    <details class="chapter">
+      <summary>📂 Sets, Relations and Functions</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Sets, Relations and Functions - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Complex Numbers and Quadratic Equations</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Complex Numbers and Quadratic Equations - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Matrices and Determinants</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Matrices and Determinants - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Permutations and Combinations</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Permutations and Combinations - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Mathematical Induction</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mathematical Induction - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Binomial Theorem and its Simple Applications</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Binomial Theorem and its Simple Applications - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Sequence and Series</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Sequence and Series - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Mathematical Reasoning</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mathematical Reasoning - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>📐 Calculus</summary>
+    <details class="chapter">
+      <summary>📂 Limits, Continuity and Differentiability</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Limits, Continuity and Differentiability - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Applications of Derivatives</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Applications of Derivatives - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Integral Calculus</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Integral Calculus - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Definite Integrals</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Definite Integrals - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Differential Equations</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Differential Equations - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>📐 Coordinate Geometry</summary>
+    <details class="chapter">
+      <summary>📂 Straight Lines</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Straight Lines - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Circles</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Circles - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Conic Sections (Parabola, Ellipse, Hyperbola)</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Conic Sections (Parabola, Ellipse, Hyperbola) - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Three Dimensional Geometry</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Three Dimensional Geometry - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>📐 Vectors &amp; Trigonometry</summary>
+    <details class="chapter">
+      <summary>📂 Vector Algebra</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Vector Algebra - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Trigonometric Ratios and Identities</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Trigonometric Ratios and Identities - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Trigonometric Equations</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Trigonometric Equations - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Inverse Trigonometric Functions</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Inverse Trigonometric Functions - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Heights and Distances</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Heights and Distances - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Properties of Triangles</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Properties of Triangles - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+  <details class="klass">
+    <summary>📐 Statistics &amp; Probability</summary>
+    <details class="chapter">
+      <summary>📂 Statistics</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Statistics - Notes</a></li>
+      </ul>
+    </details>
+    <details class="chapter">
+      <summary>📂 Probability</summary>
+      <ul class="pdfs">
+        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Probability - Notes</a></li>
+      </ul>
+    </details>
+  </details>
+</details>
     </div>
+    <div id="studyLibrary" class="grid"></div>
   </section>
   <section id="journal" style="margin-top:35px">
     <h2>My Error Journal</h2>
@@ -326,6 +834,65 @@ onAuthStateChanged(auth, async user => {
     showEmpty("अपनी saved गलतियाँ देखने के लिए Google से login करें।");
   }
 });
+</script>
+<script>
+(async function(){
+  const OWNER="ankukr824207-hub", REPO="Error-book-refresh";
+  const root=document.getElementById("studyLibrary");
+  const icons={Physics:"⚡",Chemistry:"🧪",Maths:"📐"};
+  const order=["Physics","Chemistry","Maths"];
+  const pretty=t=>t.replace(/[-_]+/g," ");
+  const cmp=(a,b)=>a.localeCompare(b,undefined,{numeric:true});
+  try{
+    const r=await fetch("https://api.github.com/repos/"+OWNER+"/"+REPO+"/git/trees/HEAD?recursive=1");
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const data=await r.json();
+    const files=data.tree.filter(t=>t.type==="blob"&&/^study\/.+\.pdf$/i.test(t.path));
+    root.replaceChildren();
+    if(!files.length){root.remove();return;}
+    const tree={};
+    files.forEach(f=>{
+      const parts=f.path.split("/");
+      const subject=parts[1];
+      const chapter=parts.length>3?parts.slice(2,-1).join(" / "):"Other";
+      const name=parts[parts.length-1];
+      ((tree[subject]=tree[subject]||{})[chapter]=tree[subject][chapter]||[]).push({name,href:parts.map(encodeURIComponent).join("/")});
+    });
+    const subjects=Object.keys(tree).sort((a,b)=>{
+      const ia=order.indexOf(a),ib=order.indexOf(b);
+      if(ia>-1||ib>-1) return (ia<0?99:ia)-(ib<0?99:ib);
+      return cmp(a,b);
+    });
+    subjects.forEach(sub=>{
+      const box=document.createElement("details");
+      box.className="card subject";
+      const sum=document.createElement("summary");
+      sum.textContent=(icons[sub]||"📁")+" "+pretty(sub);
+      box.appendChild(sum);
+      Object.keys(tree[sub]).sort(cmp).forEach(ch=>{
+        const d=document.createElement("details");
+        d.className="chapter";
+        const cs=document.createElement("summary");
+        cs.textContent="📂 "+pretty(ch)+" ("+tree[sub][ch].length+")";
+        d.appendChild(cs);
+        const ul=document.createElement("ul");
+        ul.className="pdfs";
+        tree[sub][ch].sort((a,b)=>cmp(a.name,b.name)).forEach(f=>{
+          const li=document.createElement("li");
+          const a=document.createElement("a");
+          a.href=f.href;a.target="_blank";a.rel="noopener";
+          a.textContent="📄 "+pretty(f.name.replace(/\.pdf$/i,""));
+          li.appendChild(a);ul.appendChild(li);
+        });
+        d.appendChild(ul);box.appendChild(d);
+      });
+      root.appendChild(box);
+    });
+  }catch(e){
+    console.error("Study library error:",e);
+    root.remove();
+  }
+})();
 </script>
 </body>
 </html>
