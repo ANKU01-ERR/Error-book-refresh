@@ -1,68 +1,7 @@
-<!DOCTYPE html>
-<html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Error Book Refresh | ANKU</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#101014;color:white;font-family:Arial,sans-serif}
-header{padding:20px;background:#1b1b21;text-align:center;border-bottom:1px solid #444}
-nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:15px}
-a{color:white;text-decoration:none}
-main{max-width:950px;margin:auto;padding:20px}
-.hero{text-align:center;padding:30px 10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
-.card,.panel{background:#1b1b21;border:1px solid #393940;border-radius:10px;padding:20px}
-h2{border-left:4px solid white;padding-left:12px}
-label{display:block;margin:15px 0 7px}
-input,select{width:100%;padding:12px;background:#101014;color:white;border:1px solid #555;border-radius:5px}
-button{padding:12px;background:#e63946;color:white;border:0;border-radius:5px;font-weight:bold;cursor:pointer}
-button:disabled{opacity:.6;cursor:wait}
-.panel button{width:100%;margin-top:15px}
-#gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin-top:20px}
-.entry{background:#1b1b21;padding:18px;border:1px solid #444;border-radius:8px;overflow-wrap:anywhere}
-.entry img{width:100%;max-height:250px;object-fit:contain;margin-top:10px}
-small{color:#bbb}
-footer{text-align:center;padding:25px;color:#aaa}
-.login-area{text-align:center;padding:14px 16px 0}
-#loginStatus{color:#ddd;margin:10px auto;max-width:850px;overflow-wrap:anywhere}
-#status{overflow-wrap:anywhere}
-details.subject{grid-column:1/-1}
-details.subject>summary{cursor:pointer;font-size:1.2em;font-weight:bold;list-style:none}
-details.chapter{margin:10px 0 0 10px;padding:8px 12px;background:#101014;border:1px solid #393940;border-radius:8px}
-details.chapter>summary{cursor:pointer}
-details.klass{margin:12px 0 0 6px;padding:8px 10px;border-left:3px solid #e63946}
-details.klass>summary{cursor:pointer;font-weight:bold}
-.pdfs{margin:8px 0 4px 14px;padding:0;list-style:none}
-.pdfs li{margin:8px 0}
-.pdfs a{color:#7cc4ff;overflow-wrap:anywhere}
-</style>
-</head>
-<body>
-<header>
-  <h1>📚 Error Book Refresh</h1>
-  <p>Learn from your mistakes | JEE Preparation</p>
-</header>
-<div class="login-area">
-  <button id="googleLogin" type="button">Continue with Google</button>
-  <button id="googleLogout" type="button" hidden>Sign Out</button>
-  <p id="loginStatus" role="status">Google Login के लिए वेबसाइट को HTTPS पर खोलें।</p>
-</div>
-<nav>
-  <a href="#study">Study Section</a>
-  <a href="#journal">My Error Book</a>
-</nav>
-<main>
-  <section class="hero">
-    <h2>Welcome JEE Aspirant!</h2>
-    <p>अपनी गलतियों को लिखें, दोहराएँ और अपनी तैयारी बेहतर बनाएँ।</p>
-  </section>
-  <section id="study">
-    <h2>Study Section</h2>
-    <p><small>Subject पर क्लिक करें → Chapter चुनें → PDF खोलें।</small></p>
-    <div class="grid">
-<!-- ============ PHYSICS ============ -->
+<!DOCTYPE html><html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Error Book Refresh | JEE</title><style>
+*{box-sizing:border-box}body{margin:0;background:#101014;color:#fff;font-family:Arial,sans-serif}header{background:#1b1b21;border-bottom:1px solid #383840;padding:22px 16px;text-align:center;position:relative}header h1{margin:0 0 8px;font-size:clamp(22px,4vw,32px)}header p{margin:0;color:#bbb}.login-area{position:absolute;right:12px;top:10px;text-align:right;max-width:42%}#loginStatus{font-size:11px;color:#bbb;overflow-wrap:anywhere;margin:5px 0}button{border:0;border-radius:9px;background:#e63946;color:white;padding:12px 16px;cursor:pointer;font-weight:bold}button:disabled{opacity:.6}button[hidden]{display:none!important}.login-area button{font-size:12px;padding:9px 12px}main{max-width:1000px;margin:auto;padding:24px 16px 60px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.tile,.card,.panel{background:#1b1b21;border:1px solid #42424c;border-radius:13px;padding:20px}.tile{cursor:pointer;color:white;text-align:left;font-size:19px;min-height:100px}.tile:hover{border-color:#e63946}.tile small{display:block;color:#bbb;font-size:12px;margin-top:10px}.back{background:#343440;margin-bottom:18px}.crumb{color:#bbb;margin-bottom:18px}h2{border-left:4px solid #e63946;padding-left:12px}label{display:block;margin:15px 0 7px}input,select{width:100%;padding:12px;background:#101014;color:white;border:1px solid #666;border-radius:7px}.panel button{width:100%;margin-top:15px}.subject{grid-column:1/-1}details>summary{cursor:pointer;font-weight:bold}details.subject>summary{font-size:20px}details.klass{margin:12px 0 0 6px;padding:10px;border-left:3px solid #e63946}details.chapter{margin:10px 0 0 10px;padding:10px;background:#101014;border:1px solid #393940;border-radius:8px}.pdfs{list-style:none;padding-left:12px}.pdfs li{margin:8px 0}.pdfs a{color:#80c6ff;overflow-wrap:anywhere}.entry{background:#1b1b21;padding:18px;border:1px solid #444;border-radius:8px;overflow-wrap:anywhere}.entry img{width:100%;max-height:250px;object-fit:contain}#gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}small{color:#bbb}.test-group{margin:20px 0}.test-group h3{color:#ccc}.test-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.test-item{background:#1b1b21;border:1px solid #444;border-radius:9px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}.test-item a{color:#8ed1ff}.soon{font-size:12px;color:#f8c77a;white-space:nowrap}.hidden{display:none!important}.hint{color:#aaa}.chapter-options{max-height:320px;overflow:auto}footer{text-align:center;color:#aaa;padding:22px}@media(max-width:620px){header{padding-top:95px}.login-area{max-width:95%;right:10px;top:8px}.tile{min-height:80px}}
+</style></head><body><header><div class="login-area"><button id="googleLogin" type="button">Continue with Google</button><button id="googleLogout" type="button" hidden>Sign Out</button><p id="loginStatus" role="status">Google Login के लिए HTTPS वेबसाइट खोलें।</p></div><h1>📚 Error Book Refresh</h1><p>JEE Preparation • Learn from your mistakes</p></header><main><div id="navigation"></div><div id="homeScreen"><h2>अपना सेक्शन चुनें</h2><div class="grid"><button class="tile" data-page="study">📚 Study Section<small>Physics, Chemistry, Maths Notes</small></button><button class="tile" data-page="tests">📝 Test Series<small>Full और Part Syllabus Tests</small></button><button class="tile" data-page="journal">📕 My Error Book<small>अपनी गलतियाँ सेव करें</small></button></div></div><section id="studyScreen" class="hidden"><h2>Study Section</h2><p class="hint">Subject चुनें, फिर Chapter और PDF खोलें।</p><div id="studySubjects" class="grid"><button class="tile" data-study="Physics">⚡ Physics</button><button class="tile" data-study="Chemistry">🧪 Chemistry</button><button class="tile" data-study="Maths">📐 Maths</button></div><div id="studyDetail" class="hidden"><div id="studyContent" class="grid"></div></div><div id="studyLibrary" class="grid"></div></section><section id="testsScreen" class="hidden"><h2>Test Series</h2><div id="testApp"></div></section><section id="journalScreen" class="hidden"><h2>My Error Journal</h2><div class="panel"><label for="subject">Subject</label><select id="subject"><option>Physics</option><option>Chemistry</option><option>Maths</option></select><label for="chapter">JEE Chapter</label><select id="chapter" class="chapter-options"></select><label for="note">Topic / Question (अपना नाम लिखें)</label><input id="note" maxlength="500" placeholder="जैसे Rotation Q5 / आपका Topic"><label for="photo">Question की फोटो (वैकल्पिक, 5 MB से कम)</label><input id="photo" type="file" accept="image/*"><button id="save" type="button">SAVE TO ERROR BOOK 💾</button><p id="status" role="status">पहले Google से login करें।</p></div><h2>Saved Errors</h2><div id="gallery"></div></section></main><footer>© Error Book Refresh | JEE</footer>
+<div id="studyTemplates" class="hidden"><div class="grid"><!-- ============ PHYSICS ============ -->
 <details class="card subject">
   <summary>⚡ Physics</summary>
   <details class="klass">
@@ -70,19 +9,19 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Units and Measurements</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Units and Measurements - Notes</a></li>
+        <li><span class="soon">📄 Units and Measurements - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Motion in a Straight Line</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Motion in a Straight Line - Notes</a></li>
+        <li><span class="soon">📄 Motion in a Straight Line - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Motion in a Plane</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Motion in a Plane - Notes</a></li>
+        <li><span class="soon">📄 Motion in a Plane - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
@@ -100,7 +39,7 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 System of Particles and Rotational Motion</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 System of Particles and Rotational Motion - Notes</a></li>
+        <li><span class="soon">📄 System of Particles and Rotational Motion - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
@@ -112,43 +51,43 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Mechanical Properties of Solids</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mechanical Properties of Solids - Notes</a></li>
+        <li><span class="soon">📄 Mechanical Properties of Solids - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Mechanical Properties of Fluids</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mechanical Properties of Fluids - Notes</a></li>
+        <li><span class="soon">📄 Mechanical Properties of Fluids - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Thermal Properties of Matter</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Thermal Properties of Matter - Notes</a></li>
+        <li><span class="soon">📄 Thermal Properties of Matter - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Thermodynamics</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Thermodynamics - Notes</a></li>
+        <li><span class="soon">📄 Thermodynamics - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Kinetic Theory of Gases</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Kinetic Theory of Gases - Notes</a></li>
+        <li><span class="soon">📄 Kinetic Theory of Gases - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Oscillations</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Oscillations - Notes</a></li>
+        <li><span class="soon">📄 Oscillations - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Waves</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Waves - Notes</a></li>
+        <li><span class="soon">📄 Waves - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -157,91 +96,91 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Electric Charges and Fields</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electric Charges and Fields - Notes</a></li>
+        <li><span class="soon">📄 Electric Charges and Fields - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Electrostatic Potential and Capacitance</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electrostatic Potential and Capacitance - Notes</a></li>
+        <li><span class="soon">📄 Electrostatic Potential and Capacitance - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Current Electricity</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Current Electricity - Notes</a></li>
+        <li><span class="soon">📄 Current Electricity - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Moving Charges and Magnetism</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Moving Charges and Magnetism - Notes</a></li>
+        <li><span class="soon">📄 Moving Charges and Magnetism - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Magnetism and Matter</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Magnetism and Matter - Notes</a></li>
+        <li><span class="soon">📄 Magnetism and Matter - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Electromagnetic Induction</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electromagnetic Induction - Notes</a></li>
+        <li><span class="soon">📄 Electromagnetic Induction - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Alternating Current</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Alternating Current - Notes</a></li>
+        <li><span class="soon">📄 Alternating Current - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Electromagnetic Waves</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electromagnetic Waves - Notes</a></li>
+        <li><span class="soon">📄 Electromagnetic Waves - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Ray Optics and Optical Instruments</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Ray Optics and Optical Instruments - Notes</a></li>
+        <li><span class="soon">📄 Ray Optics and Optical Instruments - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Wave Optics</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Wave Optics - Notes</a></li>
+        <li><span class="soon">📄 Wave Optics - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Dual Nature of Radiation and Matter</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Dual Nature of Radiation and Matter - Notes</a></li>
+        <li><span class="soon">📄 Dual Nature of Radiation and Matter - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Atoms</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Atoms - Notes</a></li>
+        <li><span class="soon">📄 Atoms - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Nuclei</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Nuclei - Notes</a></li>
+        <li><span class="soon">📄 Nuclei - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Semiconductor Electronics: Materials, Devices and Simple Circuits</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Semiconductor Electronics: Materials, Devices and Simple Circuits - Notes</a></li>
+        <li><span class="soon">📄 Semiconductor Electronics: Materials, Devices and Simple Circuits - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Experimental Skills (Practical Physics)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Experimental Skills (Practical Physics) - Notes</a></li>
+        <li><span class="soon">📄 Experimental Skills (Practical Physics) - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -255,61 +194,61 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Some Basic Concepts in Chemistry (Mole Concept)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Some Basic Concepts in Chemistry (Mole Concept) - Notes</a></li>
+        <li><span class="soon">📄 Some Basic Concepts in Chemistry (Mole Concept) - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Atomic Structure</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Atomic Structure - Notes</a></li>
+        <li><span class="soon">📄 Atomic Structure - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Chemical Bonding and Molecular Structure</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Bonding and Molecular Structure - Notes</a></li>
+        <li><span class="soon">📄 Chemical Bonding and Molecular Structure - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Chemical Thermodynamics</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Thermodynamics - Notes</a></li>
+        <li><span class="soon">📄 Chemical Thermodynamics - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Chemical Equilibrium</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Equilibrium - Notes</a></li>
+        <li><span class="soon">📄 Chemical Equilibrium - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Ionic Equilibrium</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Ionic Equilibrium - Notes</a></li>
+        <li><span class="soon">📄 Ionic Equilibrium - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Redox Reactions</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Redox Reactions - Notes</a></li>
+        <li><span class="soon">📄 Redox Reactions - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Solutions</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Solutions - Notes</a></li>
+        <li><span class="soon">📄 Solutions - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Electrochemistry</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Electrochemistry - Notes</a></li>
+        <li><span class="soon">📄 Electrochemistry - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Chemical Kinetics</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Chemical Kinetics - Notes</a></li>
+        <li><span class="soon">📄 Chemical Kinetics - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -318,25 +257,25 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Classification of Elements and Periodicity in Properties</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Classification of Elements and Periodicity in Properties - Notes</a></li>
+        <li><span class="soon">📄 Classification of Elements and Periodicity in Properties - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 p-Block Elements</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 p-Block Elements - Notes</a></li>
+        <li><span class="soon">📄 p-Block Elements - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 d-and f-Block Elements</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 d-and f-Block Elements - Notes</a></li>
+        <li><span class="soon">📄 d-and f-Block Elements - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Coordination Compounds</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Coordination Compounds - Notes</a></li>
+        <li><span class="soon">📄 Coordination Compounds - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -345,49 +284,49 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Purification and Characterisation of Organic Compounds</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Purification and Characterisation of Organic Compounds - Notes</a></li>
+        <li><span class="soon">📄 Purification and Characterisation of Organic Compounds - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Some Basic Principles of Organic Chemistry (GOC)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Some Basic Principles of Organic Chemistry (GOC) - Notes</a></li>
+        <li><span class="soon">📄 Some Basic Principles of Organic Chemistry (GOC) - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Hydrocarbons</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Hydrocarbons - Notes</a></li>
+        <li><span class="soon">📄 Hydrocarbons - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Organic Compounds Containing Halogens (Haloalkanes and Haloarenes)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Organic Compounds Containing Halogens (Haloalkanes and Haloarenes) - Notes</a></li>
+        <li><span class="soon">📄 Organic Compounds Containing Halogens (Haloalkanes and Haloarenes) - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Organic Compounds Containing Oxygen (Alcohols, Phenols, Ethers, Aldehydes, Ketones, Carboxylic Acids)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Organic Compounds Containing Oxygen (Alcohols, Phenols, Ethers, Aldehydes, Ketones, Carboxylic Acids) - Notes</a></li>
+        <li><span class="soon">📄 Organic Compounds Containing Oxygen (Alcohols, Phenols, Ethers, Aldehydes, Ketones, Carboxylic Acids) - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Organic Compounds Containing Nitrogen (Amines)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Organic Compounds Containing Nitrogen (Amines) - Notes</a></li>
+        <li><span class="soon">📄 Organic Compounds Containing Nitrogen (Amines) - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Biomolecules</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Biomolecules - Notes</a></li>
+        <li><span class="soon">📄 Biomolecules - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Principles Related to Practical Chemistry</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Principles Related to Practical Chemistry - Notes</a></li>
+        <li><span class="soon">📄 Principles Related to Practical Chemistry - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -401,49 +340,49 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Sets, Relations and Functions</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Sets, Relations and Functions - Notes</a></li>
+        <li><span class="soon">📄 Sets, Relations and Functions - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Complex Numbers and Quadratic Equations</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Complex Numbers and Quadratic Equations - Notes</a></li>
+        <li><span class="soon">📄 Complex Numbers and Quadratic Equations - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Matrices and Determinants</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Matrices and Determinants - Notes</a></li>
+        <li><span class="soon">📄 Matrices and Determinants - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Permutations and Combinations</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Permutations and Combinations - Notes</a></li>
+        <li><span class="soon">📄 Permutations and Combinations - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Mathematical Induction</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mathematical Induction - Notes</a></li>
+        <li><span class="soon">📄 Mathematical Induction - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Binomial Theorem and its Simple Applications</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Binomial Theorem and its Simple Applications - Notes</a></li>
+        <li><span class="soon">📄 Binomial Theorem and its Simple Applications - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Sequence and Series</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Sequence and Series - Notes</a></li>
+        <li><span class="soon">📄 Sequence and Series - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Mathematical Reasoning</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Mathematical Reasoning - Notes</a></li>
+        <li><span class="soon">📄 Mathematical Reasoning - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -452,31 +391,31 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Limits, Continuity and Differentiability</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Limits, Continuity and Differentiability - Notes</a></li>
+        <li><span class="soon">📄 Limits, Continuity and Differentiability - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Applications of Derivatives</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Applications of Derivatives - Notes</a></li>
+        <li><span class="soon">📄 Applications of Derivatives - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Integral Calculus</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Integral Calculus - Notes</a></li>
+        <li><span class="soon">📄 Integral Calculus - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Definite Integrals</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Definite Integrals - Notes</a></li>
+        <li><span class="soon">📄 Definite Integrals - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Differential Equations</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Differential Equations - Notes</a></li>
+        <li><span class="soon">📄 Differential Equations - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -485,25 +424,25 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Straight Lines</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Straight Lines - Notes</a></li>
+        <li><span class="soon">📄 Straight Lines - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Circles</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Circles - Notes</a></li>
+        <li><span class="soon">📄 Circles - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Conic Sections (Parabola, Ellipse, Hyperbola)</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Conic Sections (Parabola, Ellipse, Hyperbola) - Notes</a></li>
+        <li><span class="soon">📄 Conic Sections (Parabola, Ellipse, Hyperbola) - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Three Dimensional Geometry</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Three Dimensional Geometry - Notes</a></li>
+        <li><span class="soon">📄 Three Dimensional Geometry - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -512,37 +451,37 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Vector Algebra</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Vector Algebra - Notes</a></li>
+        <li><span class="soon">📄 Vector Algebra - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Trigonometric Ratios and Identities</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Trigonometric Ratios and Identities - Notes</a></li>
+        <li><span class="soon">📄 Trigonometric Ratios and Identities - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Trigonometric Equations</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Trigonometric Equations - Notes</a></li>
+        <li><span class="soon">📄 Trigonometric Equations - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Inverse Trigonometric Functions</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Inverse Trigonometric Functions - Notes</a></li>
+        <li><span class="soon">📄 Inverse Trigonometric Functions - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Heights and Distances</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Heights and Distances - Notes</a></li>
+        <li><span class="soon">📄 Heights and Distances - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Properties of Triangles</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Properties of Triangles - Notes</a></li>
+        <li><span class="soon">📄 Properties of Triangles - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
@@ -551,42 +490,280 @@ details.klass>summary{cursor:pointer;font-weight:bold}
     <details class="chapter">
       <summary>📂 Statistics</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Statistics - Notes</a></li>
+        <li><span class="soon">📄 Statistics - Notes — Coming Soon</span></li>
       </ul>
     </details>
     <details class="chapter">
       <summary>📂 Probability</summary>
       <ul class="pdfs">
-        <li><a href="PASTE_PDF_LINK_HERE" target="_blank" rel="noopener">📄 Probability - Notes</a></li>
+        <li><span class="soon">📄 Probability - Notes — Coming Soon</span></li>
       </ul>
     </details>
   </details>
 </details>
-    </div>
-    <div id="studyLibrary" class="grid"></div>
-  </section>
-  <section id="journal" style="margin-top:35px">
-    <h2>My Error Journal</h2>
-    <div class="panel">
-      <label for="subject">Subject</label>
-      <select id="subject">
-        <option>Physics</option>
-        <option>Chemistry</option>
-        <option>Maths</option>
-      </select>
-      <label for="note">Topic / Question</label>
-      <input id="note" maxlength="500" placeholder="उदाहरण: Rotation Q5">
-      <label for="photo">Question की फोटो (वैकल्पिक, 5 MB से कम)</label>
-      <input id="photo" type="file" accept="image/*">
-      <button id="save" type="button">SAVE TO ERROR BOOK 💾</button>
-      <p id="status" role="status">अपनी गलतियाँ सेव करने के लिए पहले Google से login करें।</p>
-    </div>
-    <h2 style="margin-top:30px">Saved Errors</h2>
-    <div id="gallery"></div>
-  </section>
-</main>
-<footer>© Error Book Refresh | JEE</footer>
-
+</div></div>
+<script>
+const CHAPTERS = {
+  Physics: {
+    "Mechanics": ["Units and Measurements","Kinematics","Laws of Motion","Work, Energy and Power","Center of Mass and Collisions","Rotational Motion","Gravitation","Mechanical Properties of Solids","Mechanical Properties of Fluids"],
+    "Heat and Waves": ["Thermal Properties of Matter","Thermodynamics","Kinetic Theory of Gases","Oscillations (SHM)","Waves and Sound"],
+    "Electricity and Magnetism": ["Electrostatics","Capacitance","Current Electricity","Moving Charges and Magnetism","Magnetism and Matter","Electromagnetic Induction","Alternating Current","Electromagnetic Waves"],
+    "Optics and Modern Physics": ["Ray Optics","Wave Optics","Dual Nature of Matter and Radiation","Atoms","Nuclei","Semiconductor Electronics","Experimental Skills"]
+  },
+  Chemistry: {
+    "Physical Chemistry": ["Some Basic Concepts of Chemistry (Mole Concept)","Atomic Structure","States of Matter","Chemical Thermodynamics","Chemical Equilibrium","Ionic Equilibrium","Redox Reactions","Solutions","Electrochemistry","Chemical Kinetics","Solid State","Surface Chemistry","Nuclear Chemistry"],
+    "Inorganic Chemistry": ["Periodic Table and Periodicity","Chemical Bonding and Molecular Structure","Hydrogen","s-Block Elements","p-Block Elements (Group 13 and 14)","p-Block Elements (Group 15 to 18)","d and f Block Elements","Coordination Compounds","Metallurgy","Environmental Chemistry","Qualitative Analysis"],
+    "Organic Chemistry": ["Basic Principles and General Organic Chemistry (GOC)","Isomerism","Hydrocarbons","Haloalkanes and Haloarenes","Alcohols, Phenols and Ethers","Aldehydes and Ketones","Carboxylic Acids and Derivatives","Amines","Biomolecules","Polymers","Chemistry in Everyday Life","Practical Organic Chemistry"]
+  },
+  Maths: {
+    "Algebra": ["Sets, Relations and Functions","Complex Numbers","Quadratic Equations","Sequences and Series","Permutations and Combinations","Binomial Theorem","Matrices","Determinants","Probability","Statistics","Mathematical Reasoning"],
+    "Trigonometry": ["Trigonometric Ratios and Identities","Trigonometric Equations","Inverse Trigonometric Functions","Properties of Triangles"],
+    "Coordinate Geometry": ["Straight Lines","Circles","Parabola","Ellipse","Hyperbola"],
+    "Calculus": ["Limits","Continuity and Differentiability","Differentiation","Application of Derivatives","Indefinite Integration","Definite Integration","Area Under Curves","Differential Equations"],
+    "Vectors and 3D": ["Vectors","Three Dimensional Geometry"]
+  }
+};
+/* TEST PDF LINKS: हर chapter में Paste the test PDF की जगह अपना PDF URL डालें. */
+const TESTS = {
+  full: { // Full Syllabus
+    Physics: {
+      // Mechanics
+      "Units and Measurements": "Paste the test PDF",
+      "Kinematics": "Paste the test PDF",
+      "Laws of Motion": "Paste the test PDF",
+      "Work, Energy and Power": "Paste the test PDF",
+      "Center of Mass and Collisions": "Paste the test PDF",
+      "Rotational Motion": "Paste the test PDF",
+      "Gravitation": "Paste the test PDF",
+      "Mechanical Properties of Solids": "Paste the test PDF",
+      "Mechanical Properties of Fluids": "Paste the test PDF",
+      // Heat and Waves
+      "Thermal Properties of Matter": "Paste the test PDF",
+      "Thermodynamics": "Paste the test PDF",
+      "Kinetic Theory of Gases": "Paste the test PDF",
+      "Oscillations (SHM)": "Paste the test PDF",
+      "Waves and Sound": "Paste the test PDF",
+      // Electricity and Magnetism
+      "Electrostatics": "Paste the test PDF",
+      "Capacitance": "Paste the test PDF",
+      "Current Electricity": "Paste the test PDF",
+      "Moving Charges and Magnetism": "Paste the test PDF",
+      "Magnetism and Matter": "Paste the test PDF",
+      "Electromagnetic Induction": "Paste the test PDF",
+      "Alternating Current": "Paste the test PDF",
+      "Electromagnetic Waves": "Paste the test PDF",
+      // Optics and Modern Physics
+      "Ray Optics": "Paste the test PDF",
+      "Wave Optics": "Paste the test PDF",
+      "Dual Nature of Matter and Radiation": "Paste the test PDF",
+      "Atoms": "Paste the test PDF",
+      "Nuclei": "Paste the test PDF",
+      "Semiconductor Electronics": "Paste the test PDF",
+      "Experimental Skills": "Paste the test PDF",
+    },
+    Chemistry: {
+      // Physical Chemistry
+      "Some Basic Concepts of Chemistry (Mole Concept)": "Paste the test PDF",
+      "Atomic Structure": "Paste the test PDF",
+      "States of Matter": "Paste the test PDF",
+      "Chemical Thermodynamics": "Paste the test PDF",
+      "Chemical Equilibrium": "Paste the test PDF",
+      "Ionic Equilibrium": "Paste the test PDF",
+      "Redox Reactions": "Paste the test PDF",
+      "Solutions": "Paste the test PDF",
+      "Electrochemistry": "Paste the test PDF",
+      "Chemical Kinetics": "Paste the test PDF",
+      "Solid State": "Paste the test PDF",
+      "Surface Chemistry": "Paste the test PDF",
+      "Nuclear Chemistry": "Paste the test PDF",
+      // Inorganic Chemistry
+      "Periodic Table and Periodicity": "Paste the test PDF",
+      "Chemical Bonding and Molecular Structure": "Paste the test PDF",
+      "Hydrogen": "Paste the test PDF",
+      "s-Block Elements": "Paste the test PDF",
+      "p-Block Elements (Group 13 and 14)": "Paste the test PDF",
+      "p-Block Elements (Group 15 to 18)": "Paste the test PDF",
+      "d and f Block Elements": "Paste the test PDF",
+      "Coordination Compounds": "Paste the test PDF",
+      "Metallurgy": "Paste the test PDF",
+      "Environmental Chemistry": "Paste the test PDF",
+      "Qualitative Analysis": "Paste the test PDF",
+      // Organic Chemistry
+      "Basic Principles and General Organic Chemistry (GOC)": "Paste the test PDF",
+      "Isomerism": "Paste the test PDF",
+      "Hydrocarbons": "Paste the test PDF",
+      "Haloalkanes and Haloarenes": "Paste the test PDF",
+      "Alcohols, Phenols and Ethers": "Paste the test PDF",
+      "Aldehydes and Ketones": "Paste the test PDF",
+      "Carboxylic Acids and Derivatives": "Paste the test PDF",
+      "Amines": "Paste the test PDF",
+      "Biomolecules": "Paste the test PDF",
+      "Polymers": "Paste the test PDF",
+      "Chemistry in Everyday Life": "Paste the test PDF",
+      "Practical Organic Chemistry": "Paste the test PDF",
+    },
+    Maths: {
+      // Algebra
+      "Sets, Relations and Functions": "Paste the test PDF",
+      "Complex Numbers": "Paste the test PDF",
+      "Quadratic Equations": "Paste the test PDF",
+      "Sequences and Series": "Paste the test PDF",
+      "Permutations and Combinations": "Paste the test PDF",
+      "Binomial Theorem": "Paste the test PDF",
+      "Matrices": "Paste the test PDF",
+      "Determinants": "Paste the test PDF",
+      "Probability": "Paste the test PDF",
+      "Statistics": "Paste the test PDF",
+      "Mathematical Reasoning": "Paste the test PDF",
+      // Trigonometry
+      "Trigonometric Ratios and Identities": "Paste the test PDF",
+      "Trigonometric Equations": "Paste the test PDF",
+      "Inverse Trigonometric Functions": "Paste the test PDF",
+      "Properties of Triangles": "Paste the test PDF",
+      // Coordinate Geometry
+      "Straight Lines": "Paste the test PDF",
+      "Circles": "Paste the test PDF",
+      "Parabola": "Paste the test PDF",
+      "Ellipse": "Paste the test PDF",
+      "Hyperbola": "Paste the test PDF",
+      // Calculus
+      "Limits": "Paste the test PDF",
+      "Continuity and Differentiability": "Paste the test PDF",
+      "Differentiation": "Paste the test PDF",
+      "Application of Derivatives": "Paste the test PDF",
+      "Indefinite Integration": "Paste the test PDF",
+      "Definite Integration": "Paste the test PDF",
+      "Area Under Curves": "Paste the test PDF",
+      "Differential Equations": "Paste the test PDF",
+      // Vectors and 3D
+      "Vectors": "Paste the test PDF",
+      "Three Dimensional Geometry": "Paste the test PDF",
+    },
+  },
+  part: { // Part Syllabus
+    Physics: {
+      // Mechanics
+      "Units and Measurements": "Paste the test PDF",
+      "Kinematics": "Paste the test PDF",
+      "Laws of Motion": "Paste the test PDF",
+      "Work, Energy and Power": "Paste the test PDF",
+      "Center of Mass and Collisions": "Paste the test PDF",
+      "Rotational Motion": "Paste the test PDF",
+      "Gravitation": "Paste the test PDF",
+      "Mechanical Properties of Solids": "Paste the test PDF",
+      "Mechanical Properties of Fluids": "Paste the test PDF",
+      // Heat and Waves
+      "Thermal Properties of Matter": "Paste the test PDF",
+      "Thermodynamics": "Paste the test PDF",
+      "Kinetic Theory of Gases": "Paste the test PDF",
+      "Oscillations (SHM)": "Paste the test PDF",
+      "Waves and Sound": "Paste the test PDF",
+      // Electricity and Magnetism
+      "Electrostatics": "Paste the test PDF",
+      "Capacitance": "Paste the test PDF",
+      "Current Electricity": "Paste the test PDF",
+      "Moving Charges and Magnetism": "Paste the test PDF",
+      "Magnetism and Matter": "Paste the test PDF",
+      "Electromagnetic Induction": "Paste the test PDF",
+      "Alternating Current": "Paste the test PDF",
+      "Electromagnetic Waves": "Paste the test PDF",
+      // Optics and Modern Physics
+      "Ray Optics": "Paste the test PDF",
+      "Wave Optics": "Paste the test PDF",
+      "Dual Nature of Matter and Radiation": "Paste the test PDF",
+      "Atoms": "Paste the test PDF",
+      "Nuclei": "Paste the test PDF",
+      "Semiconductor Electronics": "Paste the test PDF",
+      "Experimental Skills": "Paste the test PDF",
+    },
+    Chemistry: {
+      // Physical Chemistry
+      "Some Basic Concepts of Chemistry (Mole Concept)": "Paste the test PDF",
+      "Atomic Structure": "Paste the test PDF",
+      "States of Matter": "Paste the test PDF",
+      "Chemical Thermodynamics": "Paste the test PDF",
+      "Chemical Equilibrium": "Paste the test PDF",
+      "Ionic Equilibrium": "Paste the test PDF",
+      "Redox Reactions": "Paste the test PDF",
+      "Solutions": "Paste the test PDF",
+      "Electrochemistry": "Paste the test PDF",
+      "Chemical Kinetics": "Paste the test PDF",
+      "Solid State": "Paste the test PDF",
+      "Surface Chemistry": "Paste the test PDF",
+      "Nuclear Chemistry": "Paste the test PDF",
+      // Inorganic Chemistry
+      "Periodic Table and Periodicity": "Paste the test PDF",
+      "Chemical Bonding and Molecular Structure": "Paste the test PDF",
+      "Hydrogen": "Paste the test PDF",
+      "s-Block Elements": "Paste the test PDF",
+      "p-Block Elements (Group 13 and 14)": "Paste the test PDF",
+      "p-Block Elements (Group 15 to 18)": "Paste the test PDF",
+      "d and f Block Elements": "Paste the test PDF",
+      "Coordination Compounds": "Paste the test PDF",
+      "Metallurgy": "Paste the test PDF",
+      "Environmental Chemistry": "Paste the test PDF",
+      "Qualitative Analysis": "Paste the test PDF",
+      // Organic Chemistry
+      "Basic Principles and General Organic Chemistry (GOC)": "Paste the test PDF",
+      "Isomerism": "Paste the test PDF",
+      "Hydrocarbons": "Paste the test PDF",
+      "Haloalkanes and Haloarenes": "Paste the test PDF",
+      "Alcohols, Phenols and Ethers": "Paste the test PDF",
+      "Aldehydes and Ketones": "Paste the test PDF",
+      "Carboxylic Acids and Derivatives": "Paste the test PDF",
+      "Amines": "Paste the test PDF",
+      "Biomolecules": "Paste the test PDF",
+      "Polymers": "Paste the test PDF",
+      "Chemistry in Everyday Life": "Paste the test PDF",
+      "Practical Organic Chemistry": "Paste the test PDF",
+    },
+    Maths: {
+      // Algebra
+      "Sets, Relations and Functions": "Paste the test PDF",
+      "Complex Numbers": "Paste the test PDF",
+      "Quadratic Equations": "Paste the test PDF",
+      "Sequences and Series": "Paste the test PDF",
+      "Permutations and Combinations": "Paste the test PDF",
+      "Binomial Theorem": "Paste the test PDF",
+      "Matrices": "Paste the test PDF",
+      "Determinants": "Paste the test PDF",
+      "Probability": "Paste the test PDF",
+      "Statistics": "Paste the test PDF",
+      "Mathematical Reasoning": "Paste the test PDF",
+      // Trigonometry
+      "Trigonometric Ratios and Identities": "Paste the test PDF",
+      "Trigonometric Equations": "Paste the test PDF",
+      "Inverse Trigonometric Functions": "Paste the test PDF",
+      "Properties of Triangles": "Paste the test PDF",
+      // Coordinate Geometry
+      "Straight Lines": "Paste the test PDF",
+      "Circles": "Paste the test PDF",
+      "Parabola": "Paste the test PDF",
+      "Ellipse": "Paste the test PDF",
+      "Hyperbola": "Paste the test PDF",
+      // Calculus
+      "Limits": "Paste the test PDF",
+      "Continuity and Differentiability": "Paste the test PDF",
+      "Differentiation": "Paste the test PDF",
+      "Application of Derivatives": "Paste the test PDF",
+      "Indefinite Integration": "Paste the test PDF",
+      "Definite Integration": "Paste the test PDF",
+      "Area Under Curves": "Paste the test PDF",
+      "Differential Equations": "Paste the test PDF",
+      // Vectors and 3D
+      "Vectors": "Paste the test PDF",
+      "Three Dimensional Geometry": "Paste the test PDF",
+    },
+  },
+};
+const $=id=>document.getElementById(id);let page='home',studySubject=null,testType=null,testSubject=null;
+function navigate(next){page=next;studySubject=null;testType=null;testSubject=null;render();}
+function back(){if(page==='study'&&studySubject)studySubject=null;else if(page==='tests'&&testSubject)testSubject=null;else if(page==='tests'&&testType)testType=null;else page='home';render();}
+function render(){['homeScreen','studyScreen','testsScreen','journalScreen'].forEach(id=>$(id).classList.toggle('hidden',id!==({home:'homeScreen',study:'studyScreen',tests:'testsScreen',journal:'journalScreen'}[page])));$('navigation').innerHTML=page==='home'?'':'<button class="back" id="backButton">← Back</button>';$('backButton')?.addEventListener('click',back);$('studySubjects').classList.toggle('hidden',!!studySubject);$('studyDetail').classList.toggle('hidden',!studySubject);if(studySubject){const original=[...$('studyTemplates').querySelectorAll('details.subject')].find(x=>x.querySelector('summary')?.textContent.includes(studySubject));$('studyContent').replaceChildren();if(original){const clone=original.cloneNode(true);clone.open=true;clone.querySelector('summary').textContent='📚 '+studySubject; $('studyContent').appendChild(clone);}}renderTests();window.scrollTo(0,0)}
+function renderTests(){let root=$('testApp');root.replaceChildren();const make=(txt,fn)=>{const b=document.createElement('button');b.className='tile';b.textContent=txt;b.addEventListener('click',()=>{fn();render()});return b};const grid=document.createElement('div');grid.className='grid';if(!testType){grid.append(make('📋 Full Syllabus Test',()=>testType='full'),make('📑 Part Syllabus Test',()=>testType='part'));root.append(grid);return}if(!testSubject){root.insertAdjacentHTML('beforeend','<p class="hint">'+(testType==='full'?'Full':'Part')+' Syllabus → Subject चुनें</p>');['Physics','Chemistry','Maths'].forEach(s=>grid.append(make(({Physics:'⚡',Chemistry:'🧪',Maths:'📐'})[s]+' '+s,()=>testSubject=s)));root.append(grid);return}const heading=document.createElement('p');heading.className='crumb';heading.textContent=(testType==='full'?'Full':'Part')+' Syllabus → '+testSubject;root.append(heading);Object.entries(CHAPTERS[testSubject]).forEach(([group,chapters])=>{const section=document.createElement('div');section.className='test-group';const h=document.createElement('h3');h.textContent=group;section.append(h);const list=document.createElement('div');list.className='test-list';chapters.forEach(ch=>{const item=document.createElement('div');item.className='test-item';const name=document.createElement('span');name.textContent=ch;item.append(name);const url=TESTS[testType][testSubject][ch];if(url && url!=="Paste the test PDF"){const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='Open';item.append(a)}else{const soon=document.createElement('span');soon.className='soon';soon.textContent='Coming Soon';item.append(soon)}list.append(item)});section.append(list);root.append(section)})}
+function updateChapters(){const s=$('subject').value;const select=$('chapter');select.replaceChildren();Object.entries(CHAPTERS[s]).forEach(([group,chapters])=>{const opt=document.createElement('optgroup');opt.label=group;chapters.forEach(ch=>{const o=document.createElement('option');o.value=ch;o.textContent=ch;opt.append(o)});select.append(opt)})}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.page)));document.querySelectorAll('[data-study]').forEach(b=>b.addEventListener('click',()=>{studySubject=b.dataset.study;render()}));$('subject').addEventListener('change',updateChapters);updateChapters();render();
+</script>
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
@@ -636,12 +813,14 @@ function makeEntryCard(entry) {
 
   const heading = document.createElement("h3");
   heading.textContent = entry.subject || "Subject";
+  const chapterInfo = document.createElement("small");
+  chapterInfo.textContent = entry.chapter ? "Chapter: " + entry.chapter : "";
   const note = document.createElement("p");
   note.textContent = entry.note || "";
   const date = document.createElement("small");
   date.textContent = entry.dateText || "Saved";
 
-  card.append(heading, note, date);
+  card.append(heading, chapterInfo, note, date);
 
   if (entry.photoData) {
     const img = document.createElement("img");
@@ -766,6 +945,7 @@ saveButton.addEventListener("click", async () => {
 
   const subject = document.getElementById("subject").value;
   const note = document.getElementById("note").value.trim();
+   const chapter = document.getElementById("chapter").value;
   const file = document.getElementById("photo").files[0];
   if (!note) {
     setStatus("पहले Topic / Question लिखें।");
@@ -835,64 +1015,4 @@ onAuthStateChanged(auth, async user => {
   }
 });
 </script>
-<script>
-(async function(){
-  const OWNER="ankukr824207-hub", REPO="Error-book-refresh";
-  const root=document.getElementById("studyLibrary");
-  const icons={Physics:"⚡",Chemistry:"🧪",Maths:"📐"};
-  const order=["Physics","Chemistry","Maths"];
-  const pretty=t=>t.replace(/[-_]+/g," ");
-  const cmp=(a,b)=>a.localeCompare(b,undefined,{numeric:true});
-  try{
-    const r=await fetch("https://api.github.com/repos/"+OWNER+"/"+REPO+"/git/trees/HEAD?recursive=1");
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    const data=await r.json();
-    const files=data.tree.filter(t=>t.type==="blob"&&/^study\/.+\.pdf$/i.test(t.path));
-    root.replaceChildren();
-    if(!files.length){root.remove();return;}
-    const tree={};
-    files.forEach(f=>{
-      const parts=f.path.split("/");
-      const subject=parts[1];
-      const chapter=parts.length>3?parts.slice(2,-1).join(" / "):"Other";
-      const name=parts[parts.length-1];
-      ((tree[subject]=tree[subject]||{})[chapter]=tree[subject][chapter]||[]).push({name,href:parts.map(encodeURIComponent).join("/")});
-    });
-    const subjects=Object.keys(tree).sort((a,b)=>{
-      const ia=order.indexOf(a),ib=order.indexOf(b);
-      if(ia>-1||ib>-1) return (ia<0?99:ia)-(ib<0?99:ib);
-      return cmp(a,b);
-    });
-    subjects.forEach(sub=>{
-      const box=document.createElement("details");
-      box.className="card subject";
-      const sum=document.createElement("summary");
-      sum.textContent=(icons[sub]||"📁")+" "+pretty(sub);
-      box.appendChild(sum);
-      Object.keys(tree[sub]).sort(cmp).forEach(ch=>{
-        const d=document.createElement("details");
-        d.className="chapter";
-        const cs=document.createElement("summary");
-        cs.textContent="📂 "+pretty(ch)+" ("+tree[sub][ch].length+")";
-        d.appendChild(cs);
-        const ul=document.createElement("ul");
-        ul.className="pdfs";
-        tree[sub][ch].sort((a,b)=>cmp(a.name,b.name)).forEach(f=>{
-          const li=document.createElement("li");
-          const a=document.createElement("a");
-          a.href=f.href;a.target="_blank";a.rel="noopener";
-          a.textContent="📄 "+pretty(f.name.replace(/\.pdf$/i,""));
-          li.appendChild(a);ul.appendChild(li);
-        });
-        d.appendChild(ul);box.appendChild(d);
-      });
-      root.appendChild(box);
-    });
-  }catch(e){
-    console.error("Study library error:",e);
-    root.remove();
-  }
-})();
-</script>
-</body>
-</html>
+</body></html>
