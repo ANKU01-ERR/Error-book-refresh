@@ -808,9 +808,9 @@ document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=
 /* ===== EDIT PDF LINKS HERE: replace ONLY "Paste the PDF link here" ===== */
 const QUICK_LINK_PDFS = {
   syllabus: {
-    Physics: 
-    Chemistry: 
-    Maths: 
+    Physics: "Paste the PDF link here",
+    Chemistry: "Paste the PDF link here",
+    Maths: "Paste the PDF link here"
   },
   formula: {
     Physics: "Paste the PDF link here",
@@ -830,7 +830,7 @@ const QUICK_LINK_PDFS = {
 };
 const RESOURCE_TITLES={syllabus:'📚 JEE Syllabus',formula:'🧮 Important Formulae',pyq:'📝 Previous Year Papers',quicknotes:'💡 Quick Notes'};
 function openResource(kind){
-  if(!https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf[kind])return;
+  if(!QUICK_LINK_PDFS[kind])return;
   page='resources';
   document.getElementById('resourceTitle').textContent=RESOURCE_TITLES[kind];
   const root=document.getElementById('resourceList');root.replaceChildren();
